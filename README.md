@@ -21,3 +21,6 @@
 
 - go back to your vm, login with ssh. then install pm2 `npm install pm2 -g`
 - then go to your project folder, run this command `pm2 start index.js --watch`
+- try to add more routes to see the changes
+- (OPTIONAL) run `pm2 monit` to see the process
+- (OPTIONAL) if you would like to run the app to custom port, install `ufw` and allow custom port on that.
