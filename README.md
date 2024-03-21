@@ -1,26 +1,63 @@
-## Steps
+## Instructions
 
-- create new backend project, add simple routes, push to github
-- create and setup new VM
-- login to ssh using standard username and password e.g. `ssh root@123.123.123.123`
-- run ubuntu update with these commands, `sudo apt update && sudo apt upgrade`
-- install node.js using these commands
+1. **Create New Backend Project**
+   - Begin by creating a new backend project.
+   - Add simple routes to your project.
+   - Push the project to GitHub.
 
-```
-    cd ~
-    curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash
-    sudo apt install nodejs -y
-```
+2. **Create and Setup New Virtual Machine (VM)**
+   - Set up a new VM for your project.
 
-- clone your repo to VM, and run `npm install`
-- go to your new repo, click tab Actions, choose Node.js
-- write the workflow, you can take a look at `.github/workflows/node.js.yml` for your reference.
-- Now we need to setup our environment variables. Go to settings, Secrets and variables, Actions. Then click New repository secret.
-- Create 3 variables, HOST, PASSWORD, USERNAME. You can copy those details from your VM informations.
-- Then try to re-run the workflow
+3. **SSH Login to VM**
+   - Use the standard username and password to SSH into your VM. For instance: `ssh root@123.123.123.123`
 
-- go back to your vm, login with ssh. then install pm2 `npm install pm2 -g`
-- then go to your project folder, run this command `pm2 start index.js --watch`
-- try to add more routes to see the changes
-- (OPTIONAL) run `pm2 monit` to see the process
-- (OPTIONAL) if you would like to run the app to custom port, install `ufw` and allow custom port on that.
+4. **Run Ubuntu Update**
+   - Update Ubuntu using the following commands:
+     ```
+     sudo apt update && sudo apt upgrade
+     ```
+
+5. **Install Node.js**
+   - Install Node.js using the following commands:
+     ```
+     cd ~
+     curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash
+     sudo apt install nodejs -y
+     ```
+
+6. **Clone Repository to VM and Install Dependencies**
+   - Clone your GitHub repository to the VM.
+   - Run `npm install` to install project dependencies.
+
+7. **Configure GitHub Actions**
+   - Navigate to your repository on GitHub.
+   - Go to the Actions tab.
+   - Choose Node.js.
+   - Write the workflow, referring to `.github/workflows/node.js.yml` for guidance.
+
+8. **Setup Environment Variables**
+   - Navigate to Settings.
+   - Go to Secrets and variables, then Actions.
+   - Click New repository secret.
+   - Create three variables: HOST, PASSWORD, and USERNAME, using details from your VM.
+   - Re-run the workflow.
+
+9. **Install PM2 and Start Application**
+   - Log in to your VM via SSH.
+   - Install PM2 globally using `npm install pm2 -g`.
+   - Navigate to your project folder.
+   - Start your application with the following command:
+     ```
+     pm2 start index.js --watch
+     ```
+
+10. **Add More Routes and Monitor**
+    - Experiment by adding more routes to your application.
+    - Optionally, run `pm2 monit` to monitor the processes.
+
+11. **Customize Port (Optional)**
+    - If you wish to run the app on a custom port, install `ufw`.
+    - Allow the custom port using `ufw`.
+
+Follow these steps to set up your backend project efficiently, ensuring smooth development and deployment processes.
+
