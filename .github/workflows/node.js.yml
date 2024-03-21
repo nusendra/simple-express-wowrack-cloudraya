@@ -19,8 +19,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
         script: |
-          cd /var/www/html/jaghost-sbyjs-static-site
+          cd /home/simple-express-wowrack-cloudraya
           git pull origin master
-          npm run export
+          npm run dev
