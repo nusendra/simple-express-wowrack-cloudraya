@@ -22,4 +22,3 @@ jobs:
         script: |
           cd /home/simple-express-wowrack-cloudraya
           git pull origin master
-          npm run dev
