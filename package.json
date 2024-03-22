@@ -1,8 +1,13 @@
 {
   "scripts": {
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "test": "jest"
   },
   "dependencies": {
     "express": "^4.19.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
   }
 }
