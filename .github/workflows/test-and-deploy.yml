@@ -37,4 +37,5 @@ jobs:
           script: |
             cd /home/simple-express-wowrack-cloudraya
             git pull origin master
+            npm install
             echo "PORT=80" > .env
