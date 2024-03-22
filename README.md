@@ -58,6 +58,7 @@
 11. **Customize Port (Optional)**
     - If you wish to run the app on a custom port, install `ufw`.
     - Allow the custom port using `ufw`.
+    - and setup nginx for reverse proxy
 
 Follow these steps to set up your backend project efficiently, ensuring smooth development and deployment processes.
 
