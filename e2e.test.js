@@ -9,3 +9,7 @@ describe('GET /test', () => {
     expect(res.text).toBe("test 123");
   });
 });
+
+afterAll(() => {
+  app.close();
+});

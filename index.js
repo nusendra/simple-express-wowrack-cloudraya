@@ -10,8 +10,8 @@ app.get('/test', (req, res) => {
   res.send('test 123')
 })
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
-module.exports = app;
+module.exports = server;
