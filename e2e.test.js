@@ -6,7 +6,7 @@ describe('GET /wowrack', () => {
     const res = await request(app).get('/test');
 
     expect(res.statusCode).toBe(200);
-    expect(res.text).toBe("selamat pagi");
+    expect(res.text).toBe("selamat sore!");
   });
 });
 
